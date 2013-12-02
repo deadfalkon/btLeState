@@ -13,7 +13,7 @@
 
 
 
-@interface FRViewController ()
+@interface FRViewController () <CBCentralManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *bluetoothState;
 @property (nonatomic, strong) CBCentralManager* manager;
@@ -27,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.manager = [[CBCentralManager alloc] init];
+    self.manager = [[CBCentralManager alloc] init];#
+    self.manager.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
