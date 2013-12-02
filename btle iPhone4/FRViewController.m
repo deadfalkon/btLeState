@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.manager = [[CBCentralManager alloc] init];#
+    self.manager = [[CBCentralManager alloc] init];
     self.manager.delegate = self;
 }
 
